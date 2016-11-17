@@ -1,0 +1,97 @@
+﻿@model IEnumerable<MarvelApi.Model.PersoSW>
+
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>Star wars persos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hair_color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skin_color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eye_color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birth_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.homeworld)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.url)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hair_color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.skin_color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eye_color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birth_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homeworld)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edited)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.url)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
